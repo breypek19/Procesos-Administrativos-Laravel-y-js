@@ -1,0 +1,30 @@
+
+/* cambio de color de fondo al menu*/
+.navbar-laravel  {
+    background-color: rgb(11, 143, 143);
+    box-shadow: 0 5px 10px rgba(0,0,0,.04);
+   
+  }
+
+/*cambio color de letra a los enlaces y titulo*/
+  .navbar-laravel .navbar-nav .nav-link, .navbar .navbar-brand {
+    color: #fff;
+  }
+
+  .navbar-brand{
+      font-size:23px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  nav
+ 
+  /* icono de la ipuc en el titulo*/
+  .navbar-brand img{
+    width: 80px;
+    height: 50px;
+  }
+
+
+  .icon1 i {
+  font-size: 37px;
+  color: black;
+  }
