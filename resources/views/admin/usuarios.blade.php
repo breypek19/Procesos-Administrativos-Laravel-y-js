@@ -2,27 +2,38 @@
 
 @section('content')
 <div class="container">
+
+<div>
+
+
+</div>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+     
+      <th scope="col">Usuario</th>
+      <th scope="col">Email</th>
+      <th scope="col">Rol</th>
     
-    <form>
-    <div class="form-group">
-    <label for="exampleInputPassword1">Nombre Usuario</label>
-    <input type="text" class="form-control" id="nom" placeholder="Usuario">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="pass" placeholder="Password">
-  </div>
-  <div class="form-group">
-  <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-         </div>
-  
-  
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+    </tr>
+  </thead>
+
+  <tbody>
+      
+  @foreach ($users as $user)
+  <tr>
+      <td>{{ $user->nom_usuario }}</td>
+      <td>{{ $user->email }}</td>
+    <td> {{$user->role->nombre}}  </td>
+
+@endforeach
+</tr>
+
+</tbody>
+
+</table>
     
+
 </div>
 @endsection

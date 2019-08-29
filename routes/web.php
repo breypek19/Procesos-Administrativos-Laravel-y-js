@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/secre', 'SecreController@index')->name('secre');
 Route::get('/tesor', 'TesoController@index')->name('tesor');
+
+Route::resource('users', 'UsuariosControllers');

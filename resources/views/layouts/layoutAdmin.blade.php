@@ -42,7 +42,7 @@
                         
                            
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('GestionarUsuarios') }}</a>
+                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('GestionarUsuarios') }}</a>
                                 </li>
 
                                 <li class="nav-item">
