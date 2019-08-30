@@ -7,14 +7,12 @@
 @section('content')
 <div class="container">
 
-<div class="mb-3">
+<div class="mb-3 boton-agregar">
 <button type="button" class="btn btn-danger">
-    <div class="d-flex">
-    <a href="">Agregar</a>
-    <i class="material-icons">
-      add_box
-    </i>
-</div>
+    
+<a href=""><i class="material-icons">
+    person_add
+    </i></a>
 </button>
 
 </div>

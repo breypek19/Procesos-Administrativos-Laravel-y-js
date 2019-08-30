@@ -1,13 +1,14 @@
 
 
-a{
+.boton-agregar a{
     color:white;
+    
 }
-a:hover{
+.boton-agregar a:hover{
     color:white;
 }
 
-a:link{
-    text-decoration:none;
-    
+ .boton-agregar button i{
+font-size: 27px;
 }
+
