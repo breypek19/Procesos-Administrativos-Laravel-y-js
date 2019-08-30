@@ -1,10 +1,21 @@
 @extends('layouts.layoutAdmin')
 
+@section('css')
+<link href="{{ asset('css/app/user.css') }}" rel="stylesheet">
+@endsection
+
 @section('content')
 <div class="container">
 
-<div>
-
+<div class="mb-3">
+<button type="button" class="btn btn-danger">
+    <div class="d-flex">
+    <a href="">Agregar</a>
+    <i class="material-icons">
+      add_box
+    </i>
+</div>
+</button>
 
 </div>
 
