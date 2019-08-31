@@ -8,13 +8,9 @@
 <div class="container">
 
 <div class="mb-3 boton-agregar">
-<button type="button" class="btn btn-danger">
-    
-<a href=""><i class="material-icons">
-    person_add
-    </i></a>
+<button type="button" class="btn btn-danger">  
+<a href=""><i class="material-icons"> person_add </i></a>
 </button>
-
 </div>
 
 <table class="table">

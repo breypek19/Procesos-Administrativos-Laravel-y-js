@@ -20,6 +20,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
      @yield('css')
 </head>
 <body>
@@ -42,20 +43,21 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                        
-                        
+                       
                            
-                                <li class="nav-item">
+                                <li class="nav-item nave" id="enlace1">
                                     <a class="nav-link" href="{{ route('users.index') }}">{{ __('GestionarUsuarios') }}</a>
                                 </li>
 
-                                <li class="nav-item">
+                                <li class="nav-item nave" id="enlace2">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Asistencias') }}</a>
                                 </li>
 
-                                <li class="nav-item">
+                                <li class="nav-item nave" id="enlace3">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('IngresarPersonas') }}</a>
                                 </li>
                           
+                               
                       
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle text-danger" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -84,5 +86,7 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{ asset('js/jquery-3.4.1.js') }}"></script>
+    <script src="{{ asset('js/admin/ad.js') }}"></script>
 </body>
 </html>
