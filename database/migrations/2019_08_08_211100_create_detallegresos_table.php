@@ -16,8 +16,6 @@ class CreateDetallegresosTable extends Migration
         Schema::create('detallegresos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string("nombre");
-            $table->bigInteger("rubroegreso_id")->unsigned();
-            $table->foreign("rubroegreso_id")->references("id")->on("rubroegresos");
             $table->timestamps();
         });
     }

@@ -1,0 +1,35 @@
+input.form-control:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.div1{
+    height: 60px;
+}
+
+input.bu{
+    font-size: 23px;
+}
+
+div.result{
+    border-top: none;
+font-size:21px;
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 16px 0 rgba(0, 0, 0, 0.19);
+}
+ul li a{
+    color: black;
+}
+ 
+
+ul li a:hover{
+    color:black;
+}
+
+ul li a:link{
+    text-decoration:none;
+    
+   
+}

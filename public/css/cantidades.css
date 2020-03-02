@@ -1,0 +1,16 @@
+
+.recuento > div{
+    background-color: goldenrod;
+    color: white;
+    padding: 8px;
+    font-size: 18px;
+    margin:0 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 16px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+table{
+    font-size:16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

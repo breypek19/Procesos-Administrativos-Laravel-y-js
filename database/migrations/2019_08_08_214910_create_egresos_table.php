@@ -19,7 +19,7 @@ class CreateEgresosTable extends Migration
             $table->foreign("rubroegreso_id")->references("id")->on("rubroegresos");
             $table->bigInteger("detallegreso_id")->unsigned();
             $table->foreign("detallegreso_id")->references("id")->on("detallegresos");
-            $table->float("cantidad");
+            $table->double("cantidad", 10, 2);
             $table->string("dia");
             $table->string("mes");
             $table->string("año");

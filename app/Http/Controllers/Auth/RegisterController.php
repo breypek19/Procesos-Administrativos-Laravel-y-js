@@ -37,7 +37,9 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest');   //este middelware sirve para redireccionar, de tal menra
+                                      //que si ya ustd esta autenticado y quiere ir a al formulario de registro
+                                          //no le va a dejar, ya que ya ustd se encuentra autenticado
     }
 
     /**

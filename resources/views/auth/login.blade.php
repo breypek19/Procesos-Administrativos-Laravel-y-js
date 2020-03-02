@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header align-center">{{ __('Login') }}</div>
+                <div class="card-header align-center">{{ __('Inicio de Sesion') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -14,7 +14,7 @@
                         <div class="form-group row">
 
                             <div class=" col-sm-3 col-md-3  text-md-right icon1"> 
-                                <i class="material-icons">account_circle</i>
+                                <i class="material-icons text-danger">account_circle</i>
                             </div>
 
                             <div class=" col-sm-9 col-md-6">
@@ -31,7 +31,7 @@
 
                         <div class="form-group row">
                             <div  class="col-sm-3 col-md-3 icon1  text-md-right">
-                            <i class="material-icons">lock</i>
+                            <i class="material-icons text-danger">lock</i>
                             </div>
 
                             <div class="col-sm-9 col-md-6">
@@ -63,11 +63,7 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
+                                
                             </div>
                         </div>
                     </form>

@@ -17,7 +17,7 @@ class CreateIngresosTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger("rubroingreso_id")->unsigned();
             $table->foreign("rubroingreso_id")->references("id")->on("rubroingresos");
-            $table->float("cantidad");
+            $table->double("cantidad", 10, 2);
             $table->string("dia");
             $table->string("mes");
             $table->string("año");
@@ -25,6 +25,7 @@ class CreateIngresosTable extends Migration
             $table->timestamps();
         });
     }
+  //  $table->decimal('amount', 8, 2);
 
     /**
      * Reverse the migrations.

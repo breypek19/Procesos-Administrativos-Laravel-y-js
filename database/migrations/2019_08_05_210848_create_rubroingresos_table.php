@@ -15,7 +15,7 @@ class CreateRubroingresosTable extends Migration
     {
         Schema::create('rubroingresos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string("nombre");
+            $table->string("nombre")->unique();
             $table->timestamps();
         });
     }

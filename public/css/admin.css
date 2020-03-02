@@ -4,18 +4,21 @@ li{
     margin-top:-5px;
    
 }
-li:hover{
-  
-  
-    border-top:1.5px solid brown;
+
+
+
+.activa{
     
+    background-color: black;
+
+   
+
 }
 
-.click{
-    
-   background-color: orange;
-   color: white;
+.color:{
+    color:red;
 }
+
 
 
 

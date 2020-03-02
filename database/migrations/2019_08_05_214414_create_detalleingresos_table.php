@@ -15,9 +15,7 @@ class CreateDetalleingresosTable extends Migration
     {
         Schema::create('detalleingresos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string("nombre");
-            $table->bigInteger("rubroingreso_id")->unsigned();
-            $table->foreign("rubroingreso_id")->references("id")->on("rubroingresos");
+            $table->string("nombre")->unique();
             $table->timestamps();
         });
     }

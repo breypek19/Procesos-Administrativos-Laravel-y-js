@@ -1,11 +1,11 @@
 @extends('layouts.layoutSecre')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+<div class="container mt-5">
+    <div class="row mt-5  justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Hola, {{ Auth::user()->nom_usuario }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Bienvenido Al Sistema
                 </div>
             </div>
         </div>

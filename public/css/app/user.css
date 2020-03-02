@@ -1,4 +1,36 @@
+body{
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+table{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    
+}
+
+.usuari{
+    font-family:  'PT Sans', Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  
+}
+.eliminar, .eliminar:hover{
+    color:red;
+     
+}
+.editar, .editar:hover{
+    color: darkorange;
+}
+
+a:hover{
+    color:none;
+}
+
+table thead{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 .boton-agregar a{
     color:white;

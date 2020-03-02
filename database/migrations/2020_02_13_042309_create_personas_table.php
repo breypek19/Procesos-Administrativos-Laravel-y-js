@@ -15,26 +15,28 @@ class CreatePersonasTable extends Migration
     {
         Schema::create('personas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string("nombre");
+            $table->string("nombres");
             $table->string("apellidos");
             $table->string("lugar_nacimiento");
             $table->date("fecha_nacimiento");
             $table->string("sexo");
-            $table->string("identificacion");
+            $table->string("identificacion")->unique();
             $table->string("direccion_residencia");
-            $table->string("correo")->unique();
+            $table->string("correo")->nullable();  //puede contener nulos, hay hermanos que no tienen correo
             $table->string("telefono");
-            $table->string("profesion");
-            $table->string("estado civil");
-            $table->string("nom_conyugue");
-            $table->string("cant_hijos");
+            $table->string("estado_civil");
+            $table->string("nom_conyugue")->nullable();
+            $table->string("cant_hijos"); 
+            $table->string("nombre_hijos")->nullable();
             $table->string("bautismo");
-            $table->date("fecha_bautismo");
-            $table->string("pastor_bautismo");
+            $table->date("fecha_bautismo")->nullable();
+            $table->string("pastor_bautismo")->nullable();
             $table->string("espiritu");
-            $table->date("fecha_espiritu");
-            $table->string("cargos");
+            $table->date("fecha_espiritu")->nullable();
+            $table->string("cargos")->nullable();
             $table->string("estado");
+            $table->bigInteger("profesion_id")->unsigned();
+            $table->foreign("profesion_id")->references("id")->on("profesions");
             $table->timestamps();
         });
     }

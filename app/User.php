@@ -15,9 +15,11 @@ class User extends Authenticatable
      *
      * @var array
      */
+    //si los asigno a $fillable, los habilito para ser asignados en masa con el metodo create([])
     protected $fillable = [
-        'name', 'email', 'password',
+      'nom_usuario', 'email', 'password', 'role_id',
     ];
+
 
     /**
      * The attributes that should be hidden for arrays.

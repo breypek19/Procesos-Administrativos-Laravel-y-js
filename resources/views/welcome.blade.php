@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicon-16x16.png')}}">
 
-        <title>Laravel</title>
+        <title>Bienvenido- Gestion Ipuc</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -65,7 +66,7 @@
 }
 @keyframes  mark{
     0%{width: 0; }
-    100% {width: 5.5em; }
+    100% {width: 5.1em; }
 }
 @keyframes mark1{
     0%{border-right-color: slategray;}  /** solo el borde derecho de la caja es el que va a parpadear*/
@@ -85,12 +86,12 @@
             }
 
             #login{
-             font-size:18px;   
+             font-size:20px;   
             padding:12px 30px;
-            color:white;
+            color: brown;
             
             box-sizing:border-box;
-            background-color:#00FF00;
+            background-color: beige;
             border-radius:8px;
             transition: font-size .7s;
             }
@@ -131,7 +132,7 @@
 
             <div class="content">
                 <div class="mark  m-b-md">
-                    Bienvenidos
+                    Bienvenido
                 </div>
                 <div>
                     <p>Gestion Administrativa</p>

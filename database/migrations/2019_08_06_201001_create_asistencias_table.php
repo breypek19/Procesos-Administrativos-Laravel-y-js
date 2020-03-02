@@ -15,12 +15,14 @@ class CreateAsistenciasTable extends Migration
     {
         Schema::create('asistencias', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger("detalleingreso_id")->unsigned();
-            $table->foreign("detalleingreso_id")->references("id")->on("detalleingresos");
             $table->integer("canti_hermanos");
             $table->integer("canti_hermanas");
             $table->integer("canti_visitas");
             $table->integer("canti_niños");
+            $table->string("dia");
+            $table->string("mes");
+            $table->string("año");
+            $table->string("dia_semana");
             $table->timestamps();
         });
     }

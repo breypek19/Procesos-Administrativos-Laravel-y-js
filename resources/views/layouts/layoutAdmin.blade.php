@@ -3,15 +3,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicon-16x16.png')}}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Gestion Ipuc (administracion General)</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script defer src="{{ asset('js/app.js') }}"></script>
+    
 
+    <script defer src="{{ asset('js/jquery-3.4.1.js') }}"></script>
+    <script defer src="{{ asset('js/alertify.min.js') }}"></script>
+    <script defer src="{{ asset('js/tesor/generalTeso.js') }}"></script>
+    <script defer src="{{ asset('js/admin/users.js') }}"></script>
+    
+    
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -19,13 +27,17 @@
       rel="stylesheet">
 
     <!-- Styles -->
+    
+    <link href="{{ asset('css/alertify.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/default.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
-     @yield('css')
+    <link href="{{ asset('css/app/user.css') }}" rel="stylesheet">
+  
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div id="app" >
+        <nav class="navbar navbar-expand-md navbar-dark  text-white  bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                   
@@ -37,7 +49,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                    
+                    <span class="usuari">{{ Auth::user()->nom_usuario }}</span>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -45,23 +57,23 @@
                        
                        
                            
-                                <li class="nav-item nave" id="enlace1">
+                                <li class="nav-item nave " id="enlace1">
                                     <a class="nav-link" href="{{ route('users.index') }}">{{ __('GestionarUsuarios') }}</a>
                                 </li>
 
                                 <li class="nav-item nave" id="enlace2">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Asistencias') }}</a>
+                                    <a class="nav-link" href="">{{ __('Asistencias') }}</a>
                                 </li>
 
                                 <li class="nav-item nave" id="enlace3">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('IngresarPersonas') }}</a>
+                                    <a class="nav-link" href="">{{ __('IngresarPersonas') }}</a>
                                 </li>
                           
                                
                       
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle text-danger" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->role->nombre }} <span class="caret"></span>
+                                    {{ strtoupper(Auth::user()->role->nombre) }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -82,11 +94,10 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 " >
             @yield('content')
         </main>
     </div>
-    <script src="{{ asset('js/jquery-3.4.1.js') }}"></script>
-    <script src="{{ asset('js/admin/ad.js') }}"></script>
+    
 </body>
 </html>
