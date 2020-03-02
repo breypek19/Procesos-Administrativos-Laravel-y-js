@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "802cb702045296ea93c8deccc65b62c2",
+    "content-hash": "145c0209264139a6feb83703049846fe",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -2228,16 +2228,16 @@
         },
         {
             "name": "symfony/mime",
-            "version": "v4.3.3",
+            "version": "v4.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "6b7148029b1dd5eda1502064f06d01357b7b2d8b"
+                "reference": "304db017bafd71c122cd5223a9ac2d03dc24da32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/6b7148029b1dd5eda1502064f06d01357b7b2d8b",
-                "reference": "6b7148029b1dd5eda1502064f06d01357b7b2d8b",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/304db017bafd71c122cd5223a9ac2d03dc24da32",
+                "reference": "304db017bafd71c122cd5223a9ac2d03dc24da32",
                 "shasum": ""
             },
             "require": {
@@ -2245,14 +2245,17 @@
                 "symfony/polyfill-intl-idn": "^1.10",
                 "symfony/polyfill-mbstring": "^1.0"
             },
+            "conflict": {
+                "symfony/mailer": "<4.4"
+            },
             "require-dev": {
-                "egulias/email-validator": "^2.0",
-                "symfony/dependency-injection": "~3.4|^4.1"
+                "egulias/email-validator": "^2.1.10",
+                "symfony/dependency-injection": "^3.4|^4.1|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "4.4-dev"
                 }
             },
             "autoload": {
@@ -2283,7 +2286,7 @@
                 "mime",
                 "mime-type"
             ],
-            "time": "2019-07-19T16:21:19+00:00"
+            "time": "2020-02-04T09:32:40+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
