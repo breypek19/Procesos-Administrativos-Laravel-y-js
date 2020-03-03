@@ -151,7 +151,7 @@ let otr2=otro1.val().replace(/[.]/gi, "");
     if(total.length==0 || porcentaje==="" ) {
     descuento.val("0");  //el descuento de ese fondo es 0
     total1.val("0");     //el subtotal de ese fondo es 0
-  $("#neto").val(formatNumber.new( parseFloat(total)-(parseFloat(otr)+ parseFloat(otr2))));  
+  $("#neto").val(formatNumber.new( parseInt(total)-(parseInt(otr)+ parseInt(otr2))));  
     return;
     }
      
@@ -161,12 +161,12 @@ let otr2=otro1.val().replace(/[.]/gi, "");
  
 
      if(otr.length==0){
-         fondo=parseFloat(total) *((parseFloat(porcentaje)/100));
-         subtotal=parseFloat(total)-parseFloat(fondo);
+         fondo=parseInt(total) *((parsInt(porcentaje)/100));
+         subtotal=parseInt(total)-parseInt(fondo);
      }else{
-         fond=parseFloat(otr)+ parseFloat(otr2);
-      fondo=(parseFloat(total) - fond) * (parseFloat(porcentaje)/100);
-      subtotal=parseFloat(total)- (fond  + parseFloat(fondo));
+         fond=parseInt(otr)+ parseInt(otr2);
+      fondo=parseInt((parseInt(total) - fond) * (parseInt(porcentaje)/100));
+      subtotal=parseInt(parseInt(total)- (fond  + parseInt(fondo)));
      }
     
  total1.val(formatNumber.new(subtotal));
@@ -176,7 +176,7 @@ $("#cantidadNeto").val(subtotal);//type hidden para el diezmo neto
 let desc= descuento.val().replace(/[.]/gi, "");
 
 if(otr.length===0 ){
-   $("#neto").val(formatNumber.new(parseFloat(total) - ((parseFloat(desc) + 0))));
+   $("#neto").val(formatNumber.new(parseInt(total) - ((parseInt(desc) + 0))));
 
 }else{
     $("#neto").val( formatNumber.new(subtotal));

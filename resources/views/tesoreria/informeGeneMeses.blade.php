@@ -62,7 +62,7 @@ table tr th{
             <tr>
                 <th>RUBRO</th>
                  <th>DETALLE</th>
-                <th> INGRESO MENSUAL</th>
+                <th> CANTIDAD</th>
                 
                        
             </tr>
@@ -106,7 +106,7 @@ table tr th{
                 <tr>
                     <th>RUBRO</th>
                      <th>DETALLE</th>
-                    <th> INGRESO MENSUAL</th>
+                    <th> CANTIDAD</th>
                     
                            
                 </tr>
