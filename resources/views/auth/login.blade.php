@@ -14,14 +14,14 @@
                         <div class="form-group row">
 
                             <div class=" col-sm-3 col-md-3  text-md-right icon1"> 
-                                <i class="material-icons text-danger">account_circle</i>
+                                <i class="material-icons text-info">account_circle</i>
                             </div>
 
                             <div class=" col-sm-9 col-md-6">
                            
-                                <input  id="email" type="text" class="form-control @error('nom_usuario') is-invalid @enderror" name="nom_usuario" value="{{ old('nom_usuario') }}" required  autofocus />
+                                <input  id="nom_usuario" placeholder="Ingrese con su Usuario" type="text" class="form-control @error('nom_usuario') is-invalid @enderror" name="nom_usuario" value="{{ old('nom_usuario') }}" required  autofocus />
 
-                                @error('email')
+                                @error('nom_usuario')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -31,11 +31,11 @@
 
                         <div class="form-group row">
                             <div  class="col-sm-3 col-md-3 icon1  text-md-right">
-                            <i class="material-icons text-danger">lock</i>
+                            <i class="material-icons text-info">lock</i>
                             </div>
 
                             <div class="col-sm-9 col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password"  type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -45,22 +45,12 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                        
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
+                                    {{ __('Ingresar') }}
                                 </button>
 
                                 

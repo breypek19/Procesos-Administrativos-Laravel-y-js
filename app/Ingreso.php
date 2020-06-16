@@ -11,7 +11,7 @@ class Ingreso extends Pivot
 
 
     protected $fillable = [
-        'rubroingreso_id', 'detalleingres_id', 'cantidad', 'mes', 'año', 'dia', 'descripcion',
+        'rubroingreso_id', 'detalleingres_id', 'cantidad', 'mes', 'año', 'dia', 'descripcion'
       ];
 
 }

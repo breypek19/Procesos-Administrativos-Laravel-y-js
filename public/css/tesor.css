@@ -6,6 +6,9 @@ table{
 	
 	
 }
+.navbar{
+    background-color:#09665B;
+}
 
 nav a.ag:hover{
     border-bottom: 4px solid blanchedalmond;

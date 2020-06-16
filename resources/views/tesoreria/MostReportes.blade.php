@@ -151,7 +151,7 @@ TOTAL:
 
 
 
-<div class="mt-5">
+<div class="mt-5 table-responsive">
    
 <table id="report" class="table " style="width:100%">
 <thead class="thead-dark ">

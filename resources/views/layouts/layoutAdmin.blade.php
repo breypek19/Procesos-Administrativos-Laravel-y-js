@@ -58,21 +58,14 @@
                        
                            
                                 <li class="nav-item nave " id="enlace1">
-                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('GestionarUsuarios') }}</a>
+                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('Usuarios') }}</a>
                                 </li>
 
-                                <li class="nav-item nave" id="enlace2">
-                                    <a class="nav-link" href="">{{ __('Asistencias') }}</a>
-                                </li>
-
-                                <li class="nav-item nave" id="enlace3">
-                                    <a class="nav-link" href="">{{ __('IngresarPersonas') }}</a>
-                                </li>
                           
                                
                       
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-danger" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-info" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ strtoupper(Auth::user()->role->nombre) }} <span class="caret"></span>
                                 </a>
 

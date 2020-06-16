@@ -80,6 +80,7 @@ Route::get("Reportes/Visitas", "SecreMovimientosController@visitasPdf")->name("v
 Route::get("Reportes/SinEpiritu", "SecreMovimientosController@MiembrosSinEPdf")->name("miembros.SinEpiritu");
 Route::get("Reportes/Caballeros", "SecreMovimientosController@caballerosPdf")->name("miembros.caballeros");
 Route::get("Reportes/ReportCantidad", "SecreMovimientosController@cantidad")->name("cantidad");
+Route::resource('inventario', 'ControlInventario');
 
 //asistencais
 Route::resource('Asistencias', 'SecreAsistenciasController');

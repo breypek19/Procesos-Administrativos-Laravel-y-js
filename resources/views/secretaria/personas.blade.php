@@ -4,6 +4,10 @@
 <script src="{{ asset('js/secre/ingreso.js') }}" defer></script>
 @endsection
 
+@section('cssdiseño')
+<link href="{{ asset('css/registroPersonas.css') }}" rel="stylesheet">
+@endsection
+
 @section('content')
 <div class="container">
 
@@ -16,7 +20,7 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="nombre">Nombres</label>
-      <input type="text" class="form-control" id="nombres" autofocus/>
+      <input type="text" class="form-control " id="nombres" autofocus/>
     </div>
     <div class="form-group col-md-6">
       <label for="apellidos">Apellidos</label>

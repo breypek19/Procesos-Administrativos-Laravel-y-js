@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-   
-  
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Comprobante ingreso</title>
   
   <style>
@@ -13,13 +11,9 @@ body{
 
   
       font-family: sans-serif;
-    
     }
 
-  #contenedor{
 
-  }
-    
 
       table{
 border:1px  solid #825C10 ;
@@ -106,7 +100,7 @@ margin-top:-2px;
             <td  id="comp">Comprobante de Ingreso</td>
         </tr>
         <tr>
-            <td style="color:#1B9426">No.   <strong>  {{strtoupper('  '.  '00'. $datos->pivot->id)}}  </strong>  </td>
+            <td style="color:#1B9426">No.   <strong>  {{strtoupper('  '.  '00'. $datos->id)}}  </strong>  </td>
         </tr>
         
     </table>
@@ -121,9 +115,9 @@ margin-top:-2px;
         <tr>
             <td width="155"  id="ciudad">Ciudad  <strong>{{" " . ucwords("tierralta, Córdoba", "")}}</strong>  </td>
             <td style="text-align:center;  color:white; background-color: #825C10" width="60" >Fecha</td>
-            <td VALIGN="TOP" style="font-size:15px" width="85">D  <strong style="font-size:20px">{{strtoupper(' ' .$datos->pivot->dia)}}</strong></td>
-            <td VALIGN="TOP" style="font-size:15px" width="90" >M <strong style="font-size:20px">{{strtoupper(' '. $datos->pivot->mes)}}</strong></td>
-            <td VALIGN="TOP" style="font-size:15px" width="90">A   <strong style="font-size:20px">{{strtoupper(' '. $datos->pivot->año)}}</strong></td>
+            <td VALIGN="TOP" style="font-size:15px" width="85">D  <strong style="font-size:20px">{{strtoupper(' ' .$datos->dia)}}</strong></td>
+            <td VALIGN="TOP" style="font-size:15px" width="90" >M <strong style="font-size:20px">{{strtoupper(' '. $datos->mes)}}</strong></td>
+            <td VALIGN="TOP" style="font-size:15px" width="90">A   <strong style="font-size:20px">{{strtoupper(' '. $datos->año)}}</strong></td>
 </tr>
 
        
@@ -132,7 +126,7 @@ margin-top:-2px;
     <table width="70%"  id="tabla2"> 
         <tr>
             <td width="420"     id="ciudad">Recibido de</td>
-            <td style="background-color: #C2F7C7  ; color:#1B9426"   >$ <strong style="font-size:18px" >{{number_format('  '. $datos->pivot->cantidad, 0 , ",", ".")}}</strong>  </td>
+            <td style="background-color: #C2F7C7  ; color:#1B9426"   >$ <strong style="font-size:18px" >{{number_format('  '. $datos->cantidad, 0 , ",", ".")}}</strong>  </td>
            
 </tr>
        
@@ -158,7 +152,7 @@ margin-top:-2px;
 
     <table width="70%" > 
         <tr>
-            <td  >Por concepto de <strong>{{ucwords(' '. $concepto, " ")}} -{{ucwords($datos->nombre, " ")}}   </strong></td>        
+            <td  >Por concepto de <strong>{{ucwords(' '. $datos->rubro, " ")}} -{{ucwords($datos->detalle, " ")}}   </strong></td>        
 </tr>
 
        

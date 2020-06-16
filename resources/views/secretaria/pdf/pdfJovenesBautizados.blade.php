@@ -7,7 +7,9 @@
     <title>Reporte Secretaría</title>
     <style>
           
- 
+          body{
+               font-family: sans-serif;
+          }
           table{
 border:1px  solid #825C10 ;
 

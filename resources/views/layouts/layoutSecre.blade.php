@@ -35,13 +35,14 @@
     @yield('CssReportes')
     @yield('datataCss')
     @yield('asistenciaCss')
+    @yield('cssdiseño')
 </head>
 <body>
     <div id="app" class="">
-        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-white  shadow-sm" style="height: 55px">
+        <nav class="navbar  navbar-expand-md navbar-dark   shadow-sm" >
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <span class="usuari">Usuario: <strong class="text-danger ">{{ Auth::user()->nom_usuario }}</strong></span>
+                    <span class="usuari"><strong class="text-info ">{{ Auth::user()->nom_usuario }}</strong></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -56,7 +57,10 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                        
-                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('MovSecretaria.index')}}">{{ __('Registrar') }}</a>
+                            </li>
+
                         <li class="nav-item text-white dropdown ">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Reportes</a>
                             <div class="dropdown-menu">
@@ -65,22 +69,22 @@
                               <a class="dropdown-item" href="{{route('vista.ReporteGeneral')}}">Lista General</a>
                             
                             </li>
-                           
-                                <li class="nav-item">
-                              
-                                </li>
+                    
 
                                 <li class="nav-item">
                                 <a class="nav-link" href="{{route('Asistencias.index')}}">{{ __('Asistencias') }}</a>
                                 </li>
 
                                 <li class="nav-item">
-                                <a class="nav-link" href="{{route('MovSecretaria.index')}}">{{ __('Personas') }}</a>
-                                </li>
+                                    <a class="nav-link" href="{{route('inventario.index')}}">{{ __('Inventario') }}</a>
+                                    </li>
+    
+
+                    
                           
                         
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-success" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-info" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ strtoupper(Auth::user()->role->nombre ) }} <span class="caret"></span>
                                 </a>
 

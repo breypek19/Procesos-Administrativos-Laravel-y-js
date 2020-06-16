@@ -14,6 +14,8 @@ use App\Http\Requests\RequestRubro;
 use App\Http\Requests\RequestDetalle;
 use App\Rubroegreso;
 
+use function GuzzleHttp\json_decode;
+
 class IngresosController extends Controller
 {
 
@@ -68,19 +70,24 @@ class IngresosController extends Controller
    
     public function ejecutarPdf($id){
       
-
-      $rubro=  Rubroingreso::find($id);
-      $concepto=$rubro->nombre;
-          
-       $datos=$rubro->detalles->last();   //me traigo el ultimo registro, el que acabe de guardar
-      
-    
-     $letras=  $rubro->convertirNumeroLetra($datos->pivot->cantidad);
+     //en la clase rubroingreso tengo las funciones para convertir la cantidad a letras
+    $rubro=  new Rubroingreso;
      
+        $datos= DB::selectOne('select ingresos.id, rubroingresos.nombre as rubro, 
+        detalleingresos.nombre as detalle,  ingresos.cantidad, ingresos.dia, ingresos.mes, 
+         ingresos.año  
+        from ingresos inner join rubroingresos  on  ingresos.rubroingreso_id=rubroingresos.id 
+         inner join detalleingresos on  ingresos.detalleingreso_id=detalleingresos.id where ingresos.id=?', [$id]);
 
-       return \PDF::loadView('tesoreria.comprobIng2', compact("datos", "letras", "concepto"))
+    
+  
+     $letras=  $rubro->convertirNumeroLetra($datos->cantidad);
+
+    
+  
+       return \PDF::loadView('tesoreria.comprobCopy', compact("datos", "letras"))
        ->setPaper('a4', 'landscape')
-        ->stream('C-Ingreso_' . $concepto . '_' . $datos->nombre .  '.pdf'); //si lo quiero descargar enseguida uso download(), si lo quiero ver en el navegador uso stream()
+        ->stream('C-Ingreso_' . $datos->rubro . '_' . $datos->detalle .  '.pdf'); //si lo quiero descargar enseguida uso download(), si lo quiero ver en el navegador uso stream()
  
     }
 
@@ -88,17 +95,21 @@ class IngresosController extends Controller
     public function general(Request $request)
     {
       
-      
-        $rubro = Rubroingreso::find($request->rubro);
+      /*
+      $rubro = Rubroingreso::find($request->rubro);
     $rubro->detalles()->attach($request->detalle, ['cantidad' => $request->cantid,
-         'dia' => $request->dia, 'mes' =>$request->mes, 'año' =>$request->ano,
-          "descripcion" => $request->coment]);
+       'dia' => $request->dia, 'mes' =>$request->mes, 'año' =>$request->ano,
+      "descripcion" => $request->coment]);
+      */
+/*
+  en el procedimiento inserto los datos y devuelvo el id con LAST_INSERT_ID(),
+ mando el id como respuesta para abrir el comprobante de ingreso que se acaba de efectuar
+ */
+       $data=  DB::select('call registro_Ingresos(?,?,?,?,?,?,?)',
+        array($request->rubro, $request->detalle, $request->cantid,
+        $request->dia, $request->mes, $request->ano, $request->coment));
           
-          
-        
-     
-
-         return response()->json( ["dato" => $request->rubro ] );   //ahora borrar los datos del formulario, al realizar el ingreso
+         return response()->json( ["dato" => $data[0]->id ] );   //ahora borrar los datos del formulario, al realizar el ingreso
     }
 
 

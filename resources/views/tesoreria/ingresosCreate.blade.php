@@ -109,7 +109,7 @@
     <input type="text" class="form-control" id="rubro_solo" >
 </div>
   </div>
-  <button id="rubroGuardar">Guardar</button>
+  <button id="rubroGuardar" class="btn btn-success btn-lg">Guardar</button>
   </div>
 
 
@@ -123,7 +123,7 @@
   </div>
 
   
-  <button id="detalle_guardar">Guardar</button>
+  <button id="detalle_guardar"  class="btn btn-success btn-lg">Guardar</button>
   </div>
 
   

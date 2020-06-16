@@ -55,22 +55,10 @@
             .mark{
     margin-left: 6px;
     font-size: 78px;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid ;
-    transform: translateY(-50%);    
-   animation:mark 10s .2s 1 both, mark1 600ms  infinite normal;
+    
    font-family:"New Century Schoolbook", Times, serif;
    
 
-}
-@keyframes  mark{
-    0%{width: 0; }
-    100% {width: 5.1em; }
-}
-@keyframes mark1{
-    0%{border-right-color: slategray;}  /** solo el borde derecho de la caja es el que va a parpadear*/
-    100%{border-right-color:transparent }
 }
 
 
@@ -136,7 +124,7 @@
                 </div>
                 <div>
                     <p>Gestion Administrativa</p>
-                    <p>Ipuc Central Tierralta</p>
+                    <p>Ipuc TC</p>
                 </div>
 
             </div>

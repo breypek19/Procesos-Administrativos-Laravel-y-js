@@ -7,6 +7,10 @@
     <title>Reportes ingreso</title>
     <style>
           
+          body{
+               font-family: sans-serif;
+          }
+
       table{
 border:1px  solid #825C10 ;
 
@@ -115,7 +119,7 @@ table tr th{
                 <tr>
                     <th>RUBRO</th>
                      <th>DETALLE</th>
-                    <th> INGRESO MENSUAL</th>
+                    <th> EGRESO MENSUAL</th>
                     
                            
                 </tr>

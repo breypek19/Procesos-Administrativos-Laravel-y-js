@@ -41,12 +41,12 @@
 
 </head>
 <body>
-    <div id="app" class="bg-white">
+    <div id="app" >
         <nav 
-        class="navbar fixed-top navbar-expand-md navbar-dark bg-danger  shadow-sm " style="height: 60px">
+        class="navbar navbar-expand-md navbar-dark  shadow-sm " >
             <div class="container">
                 <a class="navbar-brand text-light" href="{{ url('/') }}">
-                    <span class="usuari">Usuario: <strong class="text-black ">{{ Auth::user()->nom_usuario }}</strong></span>
+                    <span class="usuari"> <strong class="text-black ">{{ Auth::user()->nom_usuario }}</strong></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

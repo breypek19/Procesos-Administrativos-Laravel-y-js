@@ -52,6 +52,7 @@ class MovimientosController extends Controller
             class="edit btn btn-primary btn-sm editar">Editar</button>';
                 $button .= '&nbsp;&nbsp;';
                 $button .= '<button type="button" name="delete" id="'.$data->id.'" class="delete btn btn-danger btn-sm eliminar">Eliminar</button>';
+                $button .= '<button class="comprobante btn btn-link d-none"  id="'.$data->id.'" ><span class="material-icons"> cloud_download </span></button>'; 
                 return $button;
             })
             ->rawColumns(['action'])
@@ -69,6 +70,7 @@ class MovimientosController extends Controller
 
         $listaMeses = DB::table('ingresos') 
         ->select('mes')
+        ->orderBy('mes', 'asc')
         ->distinct()->get();
 
         return view('tesoreria.MostReportes', compact("rubros", "listaAños", "listaMeses"));

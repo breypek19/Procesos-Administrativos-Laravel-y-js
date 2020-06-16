@@ -122,6 +122,24 @@ eliminar(id);
 
 });
 
+//mostrar comprobante al dar click en el icono de descarga
+$(document).on('click', ".comprobante", function(e){
+  let id =$(this).attr('id');
+  window.open("http://127.0.0.1:8000/tesor/comprobante/ingreso/" + id);
+});
+
+//al pasar el raton encima de alguna fila o ingreso, se muestra el icono de descargar comprobante
+$(document).on('mouseenter', 'tr', function(){
+
+$(this)[0].childNodes[8].children[2].className="comprobante btn btn-link"
+});
+
+//al quitar el raton encima de la fila, se vuelve a ocultar el icono de descarga
+$(document).on('mouseleave', 'tr', function(){
+  //console.log($(this)[0].childNodes[8].children[2].className="comprobante btn btn-link");
+  $(this)[0].childNodes[8].children[2].className="comprobante btn btn-link d-none"
+  });
+
 
 
 

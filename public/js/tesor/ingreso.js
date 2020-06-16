@@ -91,7 +91,8 @@ function crearDetalle(detalle){
  $("#cantidad").val("");
  $("#fecha").val("");
  $("#comentario").val("");
- //  console.log(data.dato);     
+ //  console.log(data.dato);    
+ 
   window.open("http://127.0.0.1:8000/tesor/comprobante/ingreso/" + data.dato); //hago esto para abrir el pdf en otra pestaña
           
    },
